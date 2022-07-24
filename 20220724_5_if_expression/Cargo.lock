@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_data_structure"
+name = "rust_if_expression"
 version = "0.1.0"

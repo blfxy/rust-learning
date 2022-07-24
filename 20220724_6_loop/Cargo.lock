@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_car"
+name = "rust_loop"
 version = "0.1.0"
