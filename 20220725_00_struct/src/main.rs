@@ -6,6 +6,11 @@ struct User {
 }
 // 元组结构体
 struct Color(i32, i32, i32);
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 fn main() {
     let black = Color(0, 0, 0);
     println!("{}", black.0);
@@ -31,6 +36,14 @@ fn main() {
 
     let user3 = build_user(String::from("abc@123.com;"), String::from("xiaohong"));
     println!("{}", user3.usernmae);
+
+    let rect = Rectangle {
+        width: 10,
+        height: 50,
+    };
+    println!("{}", area(&rect));
+    println!("{:?}", rect);
+    println!("{:#?}", rect);
 }
 fn build_user(email: String, usernmae: String) -> User {
     User {
@@ -39,4 +52,7 @@ fn build_user(email: String, usernmae: String) -> User {
         active: true,
         sign_in_count: 0,
     }
+}
+fn area(rect: &Rectangle) -> u32 {
+    rect.width * rect.height
 }
